@@ -38,7 +38,6 @@ You can also create new PCAP files from captures or displayed dialogs.
 ./bootstrap.sh
 %configure \
     --enable-unicode \
-    --enable-ipv6 \
     --enable-eep \
     %{?_with_openssl}
 
