@@ -12,7 +12,6 @@ URL:                http://github.com/irontec/sngrep
 BuildRequires: ncurses-devel
 BuildRequires: make
 BuildRequires: libpcap-devel
-BuildRequires: pcre-devel
 BuildRequires: autoconf
 BuildRequires: automake
 BuildRequires: gcc
@@ -21,7 +20,6 @@ BuildRequires: openssl-devel
 %endif
 Requires: ncurses
 Requires: libpcap
-Requires: pcre
 
 %description
 sngrep displays SIP Messages grouped by Call-Id into flow
@@ -38,7 +36,7 @@ You can also create new PCAP files from captures or displayed dialogs.
 
 %build
 ./bootstrap.sh
-%configure --with-pcre \
+%configure \
     --enable-unicode \
     --enable-ipv6 \
     --enable-eep \
